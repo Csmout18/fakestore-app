@@ -1,12 +1,42 @@
-# React + Vite
+FakeStore App
+This is a React application that interacts with the FakeStoreAPI to simulate a simple e-commerce platform. Users can view, add, edit, and delete products. The app is styled using React Bootstrap and uses React Router for navigation.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
 
-Currently, two official plugins are available:
+Home Page
+  Displays a welcome message
+  Button to navigate to the Product Listing page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Product Listing Page
 
-## Expanding the ESLint configuration
+  Fetches and displays products from FakeStoreAPI
+  Each product shows an image, title, price, and a link to view details
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Product Details Page
+
+  Shows full product information: image, title, description, category, and price
+  Includes buttons to add to cart and delete the product
+  Uses URL parameters to fetch product by ID
+  Handles loading and error states
+
+Add Product Page
+
+  Form to add a new product via POST request
+  Fields: title, price, description, category
+  Confirmation message shown after submission
+
+Edit Product Page
+  Pre-filled form to update product data via PUT request
+  Shows a success message after update
+
+Delete Product
+
+  Deletes a product using DELETE request
+  Confirmation modal before deleting
+  Redirects to product listing after deletion
+
+Navigation
+  
+  React Bootstrap Navbar present across all pages
+  Links to Home, Product Listing, and Add Product
+  Mobile responsive
